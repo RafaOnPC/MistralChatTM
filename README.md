@@ -1,6 +1,6 @@
 ### 👉 Descripción
 
-Chat web para la generación de respuestas automaticas utilizando el modelo de inteligencia artificial, Mistralai
+Chat web para la generación de respuestas automaticas utilizando JavaScript, NodeJS, ExpressJS y el modelo de inteligencia artificial, Mistralai
 
 ### 👉 Instalacion
 
