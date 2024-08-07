@@ -6,13 +6,11 @@ const port = 3000;
 
 const hf = new HfInference('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');
 
-// Servir archivos estáticos desde el directorio 'public'
 app.use(express.static('public'));
 
-// Ruta para manejar la solicitud del usuario y obtener respuesta
 app.get('/api/query', async (req, res) => {
   try {
-    const userInput = req.query.input; // Obtener el parámetro 'input' de la solicitud GET
+    const userInput = req.query.input;
     if (!userInput) {
       throw new Error('No input provided');
     }
@@ -32,7 +30,6 @@ app.get('/api/query', async (req, res) => {
       }
     }
 
-    // Enviar la respuesta al cliente
     res.json({ answer: out });
 
   } catch (error) {
@@ -41,7 +38,7 @@ app.get('/api/query', async (req, res) => {
   }
 });
 
-// Iniciar el servidor
+// Iniciacion del servidor
 app.listen(port, () => {
   console.log(`Servidor iniciado en http://localhost:${port}`);
 });
